@@ -12,6 +12,9 @@
     <ClCompile Include="Device.cpp">
       <Filter>cpp</Filter>
     </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Device.h">
@@ -19,6 +22,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="Effect.hlsl" />
+    <None Include="Effect.hlsl" />
   </ItemGroup>
 </Project>
