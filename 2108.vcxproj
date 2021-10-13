@@ -18,6 +18,15 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Device.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Device.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Effect.hlsl" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{5F14055C-EA3C-47DC-B380-33AED441D2B3}</ProjectGuid>
