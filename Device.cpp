@@ -205,11 +205,14 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 			{
 				DestroyWindow(hwnd);
 			}
+
 			return 0;
 
 		case WM_DESTROY:
 			PostQuitMessage(0);
 			return 0;
+
+
 	}
 
 	return DefWindowProc(hwnd, msg, wParam, lParam);
