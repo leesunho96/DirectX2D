@@ -27,10 +27,13 @@ void InitScene()
 	// *bgColor = D3DXCOLOR(0, 0, 1, 1);
 
 
-	Vertex vertices[2];
+	Vertex vertices[6];
 	vertices[0].Potision = D3DXVECTOR3(-0.5f, -0.5f, 0.0f);
 	vertices[1].Potision = D3DXVECTOR3(-0.5f, +0.5f, 0.0f);
-
+	vertices[2].Potision = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+	vertices[3].Potision = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+	vertices[4].Potision = D3DXVECTOR3(0.5f, -0.5f, 0.0f);
+	vertices[5].Potision = D3DXVECTOR3(0.5f, 0.5f, 0.0f);
 
 	// {} : 스택 프레임 생성, 스택 프레임은 지역 변수, 나가면 메모리 해제, 스택프레임 깨짐.
 
@@ -38,7 +41,7 @@ void InitScene()
 	{
 		D3D11_BUFFER_DESC desc = { 0 };
 		desc.Usage = D3D11_USAGE_DEFAULT;
-		desc.ByteWidth = sizeof(Vertex) * 2;
+		desc.ByteWidth = sizeof(Vertex) * 6;
 		desc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
 
 		D3D11_SUBRESOURCE_DATA data = { 0 };
@@ -97,7 +100,7 @@ void Render()
 {
 	// 색 표현을 위한 클래스, float형으로 구성, r, g, b, a로 구성. a 는 항상 1로 구성
 
-	bgColor = D3DXCOLOR(0.1, 0.3, 0.5, 1);
+	bgColor = D3DXCOLOR(0.1f, 0.3f, 0.5f, 1);
 
 	// Device : CPU
 
@@ -111,10 +114,13 @@ void Render()
 		UINT offset = 0;
 
 		DeviceContext->IASetVertexBuffers(0, 1, &pVertexBuffer, &stride, &offset);
-		DeviceContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_LINELIST);
+		DeviceContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);
 		DeviceContext->IASetInputLayout(pInputLayout);
-		
-		DeviceContext->Draw(2, 0);
+		DeviceContext->Draw(6, 0);
+
+		//D3DXCOLOR triangleColor = D3DXCOLOR(0, 0, 0, 1);
+		// 해당 도형 색 결정하는 메소드.
+		//DeviceContext->ClearRenderTargetView(RTV, (float*)triangleColor);
 	}
 
 
