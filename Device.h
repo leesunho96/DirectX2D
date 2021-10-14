@@ -31,6 +31,8 @@ extern ID3D11PixelShader* PixelShader;
 extern ID3D10Blob* VsBlob;
 extern ID3D10Blob* PsBlob;
 
+static D3DXCOLOR bgColor = D3DXCOLOR(0, 0, 0, 1);
+static int temp = 0;
 
 void InitWindow(HINSTANCE hInstance, int ShowWnd);
 void InitDirect3D(HINSTANCE hInstance);

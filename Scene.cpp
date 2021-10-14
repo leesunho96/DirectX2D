@@ -7,7 +7,8 @@ void InitScene()
 	// handle이 들어가면 메세지 박스가 자식으로 처리, 자식 창 처리 이전에는 프로그램 진행 되지 않음.
 	MessageBox(Hwnd, L"Init Scene", L"Test", MB_OK);
 	// Hwnd 없이(hwnd에 null시) 진행시 메세지 박스와 프로그램 진행이 별개로 진행.
-	//MessageBox(NULL, L"Init Scene", L"Test", MB_OK);
+	MessageBox(NULL, L"Init Scene", L"Test", MB_OK);
+	//*bgColor = D3DXCOLOR(0, 0, 1, 1);
 }
 
 
@@ -29,6 +30,7 @@ void DestroyScene()
 // 프로그램 내용 업데이트
 void Update()
 {
+	//bgColor = bgColor == D3DXCOLOR(0, 0, 1, 1) ? D3DXCOLOR(255, 255, 255, 1) : D3DXCOLOR(0, 0, 1, 1);
 
 }
 
@@ -36,7 +38,8 @@ void Update()
 void Render()
 {
 	// 색 표현을 위한 클래스, float형으로 구성, r, g, b, a로 구성. a 는 항상 1로 구성
-	D3DXCOLOR bgColor = D3DXCOLOR(0, 0, 1, 1);
+
+	bgColor = D3DXCOLOR(0.1, 0.3, 0.5, 1);
 
 	// Device : CPU
 
