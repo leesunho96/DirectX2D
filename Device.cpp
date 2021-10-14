@@ -14,12 +14,21 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 
 HWND Hwnd = NULL;
-wstring Title = L"Draw Sprite";
+wstring Title = L"2108DirectX2d";
 
 IDXGISwapChain* SwapChain;
+//Device :  CPU, 연산처리
 ID3D11Device* Device;
+//DeviceContext : GPU, 화면에 그리는 연산.
 ID3D11DeviceContext* DeviceContext;
 ID3D11RenderTargetView* RTV;
+
+/*
+	DX10부터 완벽하게 CPU, GPU 분리.
+	그 통신은 RAM - VRAM을 이용
+*/
+
+
 
 ID3D11VertexShader* VertexShader;
 ID3D11PixelShader* PixelShader;
