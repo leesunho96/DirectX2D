@@ -39,7 +39,7 @@ void InitDirect3D(HINSTANCE hInstance);
 void Destroy();
 
 WPARAM Running();
-LRESULT CALLBACK WndProc(HWND hWnd,	UINT msg, WPARAM wParam, LPARAM lParam);
+LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 ///////////////////////////////////////////////////////////////////////////////
 

@@ -4,7 +4,7 @@
 // I : Interface, 생성값에 대한 구조체 존재. 
 ID3D11Buffer* pVertexBuffer = nullptr;
 ID3D11InputLayout* pInputLayout = nullptr;
-D3D11_INPUT_ELEMENT_DESC InputElementDesc[] = 
+D3D11_INPUT_ELEMENT_DESC InputElementDesc[] =
 {
 	{"Position", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 }
 };
@@ -91,7 +91,7 @@ void DestroyScene()
 // 프로그램 내용 업데이트
 void Update()
 {
-	
+
 
 }
 
